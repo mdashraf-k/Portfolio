@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #000000;
+    --color-on-primary: #ffffff;
+    --color-secondary: #5d5f5f;
+    --color-surface: #fbf8ff;
+    --color-on-surface: #1a1b22;
+    --grid-line-color: #e3e1ec;
+  }
+}
+
+/* Custom design system utility tokens */
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-on-surface {
+  color: var(--color-on-surface);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-on-primary {
+  color: var(--color-on-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.wireframe-bg {
+  background-image: linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.wireframe-bg-dense {
+  background-image: linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.arch-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arch-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px 0px var(--color-primary);
+}
+
+.arch-hover-active {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px 0px var(--color-primary);
+}
+
+.btn-hover:hover {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.nav-link {
+  transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Custom scrollbar for minimalist brutalist aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
